@@ -38,6 +38,9 @@
                                 <color key="backgroundColor" systemColor="labelColor"/>
                                 <state key="normal" title="OBLICZ"/>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="trash" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="ipY-sZ-R6U">
+                                <rect key="frame" x="87" y="90" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
@@ -45,16 +48,23 @@
                             <constraint firstItem="r6Q-Wi-CEH" firstAttribute="top" secondItem="ppW-C3-poW" secondAttribute="bottom" constant="24" id="1xc-UW-EC2"/>
                             <constraint firstItem="r6Q-Wi-CEH" firstAttribute="width" secondItem="ppW-C3-poW" secondAttribute="width" id="2U3-aM-Hp3"/>
                             <constraint firstItem="ppW-C3-poW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="47W-Dg-jJG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="ppW-C3-poW" secondAttribute="centerX" id="5Ra-cU-PoQ"/>
                             <constraint firstItem="qTu-Y2-xiE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6am-sm-TAb"/>
                             <constraint firstItem="r6Q-Wi-CEH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="93W-P4-gAU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerY" secondItem="ppW-C3-poW" secondAttribute="bottom" constant="-17" id="AAb-yN-VVd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="centerX" secondItem="ppW-C3-poW" secondAttribute="centerX" id="F9Y-RT-EY9"/>
+                            <constraint firstItem="ipY-sZ-R6U" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3m-4H-JF8"/>
                             <constraint firstItem="ppW-C3-poW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="NiN-e6-mSf"/>
                             <constraint firstItem="qTu-Y2-xiE" firstAttribute="top" secondItem="r6Q-Wi-CEH" secondAttribute="bottom" constant="40" id="beb-NG-hEA"/>
                             <constraint firstItem="JQx-yb-9rK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lc7-uN-Vpy"/>
+                            <constraint firstItem="ipY-sZ-R6U" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="m3A-ED-sNG"/>
                             <constraint firstItem="JQx-yb-9rK" firstAttribute="top" secondItem="qTu-Y2-xiE" secondAttribute="bottom" constant="24" id="ooi-qC-NhH"/>
                             <constraint firstItem="ppW-C3-poW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="s15-Ee-loQ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dlugoscTextField" destination="r6Q-Wi-CEH" id="vwt-XM-DgU"/>
+                        <outlet property="label" destination="JQx-yb-9rK" id="0ol-ZA-Qwr"/>
                         <outlet property="srednicaTextField" destination="ppW-C3-poW" id="SLD-JN-DT9"/>
                     </connections>
                 </viewController>
@@ -64,6 +74,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
