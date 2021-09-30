@@ -1,24 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KalkulatorKubikowMarcina" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Srednica" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ppW-C3-poW">
+                                <rect key="frame" x="24" y="436" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" keyboardAppearance="alert"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dlugosc" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r6Q-Wi-CEH">
+                                <rect key="frame" x="24" y="494" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQx-yb-9rK">
+                                <rect key="frame" x="202" y="622" width="10.5" height="21"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qTu-Y2-xiE">
+                                <rect key="frame" x="180" y="568" width="54" height="30"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <state key="normal" title="OBLICZ"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstItem="r6Q-Wi-CEH" firstAttribute="top" secondItem="ppW-C3-poW" secondAttribute="bottom" constant="24" id="1xc-UW-EC2"/>
+                            <constraint firstItem="r6Q-Wi-CEH" firstAttribute="width" secondItem="ppW-C3-poW" secondAttribute="width" id="2U3-aM-Hp3"/>
+                            <constraint firstItem="ppW-C3-poW" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="47W-Dg-jJG"/>
+                            <constraint firstItem="qTu-Y2-xiE" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6am-sm-TAb"/>
+                            <constraint firstItem="r6Q-Wi-CEH" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="93W-P4-gAU"/>
+                            <constraint firstItem="ppW-C3-poW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="NiN-e6-mSf"/>
+                            <constraint firstItem="qTu-Y2-xiE" firstAttribute="top" secondItem="r6Q-Wi-CEH" secondAttribute="bottom" constant="40" id="beb-NG-hEA"/>
+                            <constraint firstItem="JQx-yb-9rK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lc7-uN-Vpy"/>
+                            <constraint firstItem="JQx-yb-9rK" firstAttribute="top" secondItem="qTu-Y2-xiE" secondAttribute="bottom" constant="24" id="ooi-qC-NhH"/>
+                            <constraint firstItem="ppW-C3-poW" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-24" id="s15-Ee-loQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="srednicaTextField" destination="ppW-C3-poW" id="SLD-JN-DT9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="69.642857142857139"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
